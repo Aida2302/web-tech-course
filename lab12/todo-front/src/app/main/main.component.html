@@ -1,0 +1,15 @@
+<ng-container>
+  <div>
+    <div *ngFor="let c of tasks">
+      <span (click)="getTasks(c)">
+        <input type="text" [(ngModel)]="c.name" />
+      </span>
+      <span style="color: red" (click)="deleteTask(c)"> Delete</span>
+      <span style="color: green" (click)="updateTask(c)"> Edit</span>
+    </div>
+  </div>
+</ng-container>
+
+<div>
+  <div *ngFor="let t of tasks">{{t.name}}  {{t.status}}</div>
+</div>
